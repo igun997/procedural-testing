@@ -1,0 +1,6 @@
+<?php
+require __DIR__ . "/Bootstrap/Boot.php";
+use \Bootstrap\CommandLine;
+
+$cli = new CommandLine();
+$cli->run();

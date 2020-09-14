@@ -1,0 +1,26 @@
+{
+    "name": "igun997/pipeline_tests",
+    "description": "Pipeline PHPUnits",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "SystemFive",
+            "email": "systemfive.id@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bootstrap\\": "Bootstrap",
+            "Logs\\": "Logs",
+            "Procedures\\": "Procedures"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "beberlei/assert": "^3.2",
+        "splitbrain/php-cli": "^1.1",
+        "fzaninotto/faker": "^1.9",
+        "nette/robot-loader": "^3.3"
+    }
+}
