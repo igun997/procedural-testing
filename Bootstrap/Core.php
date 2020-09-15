@@ -25,7 +25,7 @@ class Core implements CoreContract {
         $this->base_endpoint = $base;
         $this->client = new Client([
             'base_uri' => $this->base_endpoint,
-            'timeout'  => 2.0,
+            'timeout'  => 10,
         ]);
         $this->headers = [];
         return $this;

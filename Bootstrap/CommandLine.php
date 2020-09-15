@@ -136,8 +136,8 @@ class CommandLine extends CLI {
                             array(Colors::C_RED, Colors::C_YELLOW, (($response === TRUE)?Colors::C_GREEN:Colors::C_RED))
                         );
 
-                        $env = getenv("APP_DEBUG");
-                        if (!$env && !$response){
+                        $env =  true;
+                        if ($env && !$response){
                             $this->alert("Invalid Result not Allowed on Production Mode");
                             exit();
                         }
@@ -202,6 +202,11 @@ class CommandLine extends CLI {
                             array(($num+1), $row_data, (($response === TRUE)?"OK":"FAILED"),Core::getDebug()),
                             array(Colors::C_RED, Colors::C_YELLOW, (($response === TRUE)?Colors::C_GREEN:Colors::C_RED))
                         );
+                        $env =  true;
+                        if ($env && !$response){
+                            $this->alert("Invalid Result not Allowed on Production Mode");
+                            exit();
+                        }
                         Core::setDebug("-");
                     }
                 }
@@ -264,6 +269,11 @@ class CommandLine extends CLI {
                             array(($num+1), $row_data, (($response === TRUE)?"OK":"FAILED"),Core::getDebug()),
                             array(Colors::C_RED, Colors::C_YELLOW, (($response === TRUE)?Colors::C_GREEN:Colors::C_RED))
                         );
+                        $env =  true;
+                        if ($env && !$response){
+                            $this->alert("Invalid Result not Allowed on Production Mode");
+                            exit();
+                        }
                         Core::setDebug("-");
                     }
                 }
