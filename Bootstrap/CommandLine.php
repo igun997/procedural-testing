@@ -18,7 +18,9 @@ class CommandLine extends CLI {
         $load->addDirectory(__DIR__."/../Procedures");
         $load->ignoreDirs = ["Init.php"];
         $load->rebuild();
-        return $this->_reformatClass(array_keys($load->getIndexedClasses()));
+        $reverse = array_reverse(array_keys($load->getIndexedClasses()));
+
+        return $this->_reformatClass($reverse);
     }
 
     private function _reformatClass(array $data)
